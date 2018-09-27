@@ -8,31 +8,36 @@ Peeps:
     Mother ID - if none, show N/A
     Job - if none, show "Laborer"
     House ID
+    Skills: - all skills start at 1 for now. Points per month = 9 + skill (so skill level 5 in farming will provide 14 points per month)
+        Farming
+        Building
+        Labor
     Resource Use:
         1 food per month
 
 Jobs:
     Farmer
-        Assigned to one farm tile. 
-        10 farm points per month
+        Automatically assigns available points to farmland. 
+        Farmers work together to finish farmland tiles. There should never be multiple fields partially tilled.
     Builder
         Automatically starts working on the highest priority building under construction (usually the first one you placed)
         Multiple builders speed up the process
-        10 build points per month
     Laborer
-        Will automatically chop down trees. 
-        10 labor points per month
+        Will automatically chop down trees.
    
 
 Buildings:
     House
         has a "in construction" stage as soon as you build it. 
+        Can be placed on space with trees, but will add 10 build points to total required. (will automatically chop trees in area during that month)
         Takes 20 build points. (one builder = two months, two builders = one month)
-        Can house 4 people
+        Can house 4 peeps
     Farmland
+        Doesn't require builders. Built immediately. Farmers can be assigned that month.
+        Must be placed on space with no trees
         Can have one peep assigned per farm tile.
         10 farm points required every month for April, May, June, July, August, October in order to be fertile.
-        Produces 6 food each month for July, August, and October
+        Produces 18 food in October
 
 Resources: - currently doesn't require a building to store. Infinite storage
     Wood
