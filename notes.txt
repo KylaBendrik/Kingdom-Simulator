@@ -1,0 +1,43 @@
+Peeps:
+    ID
+    First Name (randomly generated for now)
+    Last Name (inheirited from Father)
+    Birth Date
+    Death Date
+    Father ID - if none, show N/A
+    Mother ID - if none, show N/A
+    Job - if none, show "Laborer"
+    House ID
+    Resource Use:
+        1 food per month
+
+Jobs:
+    Farmer
+        Assigned to one farm tile. 
+        10 farm points per month
+    Builder
+        Automatically starts working on the highest priority building under construction (usually the first one you placed)
+        Multiple builders speed up the process
+        10 build points per month
+    Laborer
+        Will automatically chop down trees. 
+        10 labor points per month
+   
+
+Buildings:
+    House
+        has a "in construction" stage as soon as you build it. 
+        Takes 20 build points. (one builder = two months, two builders = one month)
+        Can house 4 people
+    Farmland
+        Can have one peep assigned per farm tile.
+        10 farm points required every month for April, May, June, July, August, October in order to be fertile.
+        Produces 6 food each month for July, August, and October
+
+Resources: - currently doesn't require a building to store. Infinite storage
+    Wood
+        Comes from trees. 
+        Each tree provides 2 wood.
+        Requires 5 labor points (one laborer can chop two trees per month)
+    Food
+        Comes from Farmland
