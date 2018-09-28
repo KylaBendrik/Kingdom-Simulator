@@ -1,43 +1,99 @@
+Game: (settings for now)
+    New game, new map, January 1, Year 1
+    Start with 4 people. Two married couples, all 21. All have skill level 1.
+    Start with 1 house, no farmland.
+    Resources: 
+        Wood - 0
+        Food - 50 (enough for 4 people to survive for 1 year, plus a little)
+
+Pages:
+    Map
+    Settings
+        Game - will take effect next new game
+            NEW Game
+            Starting Conditions:
+                Map size: (default 20x20)
+                Couples: (default 2)
+                Resources:
+                    Wood: (default 0)
+                    Food: (default 50)
+                Trees: (default 60%)
+                Skill levels:
+                    All: (default 1)
+            Skills
+                Efficiency: (default 9 + skill)
+                Learning: 0.25 levels per month
+            Resource Use:
+                Food: 1 per person per month
+            Resources:
+                Trees:
+                    Wood: 2 per tree
+                    Labor Points: 5 per tree
+                Farmland:
+                    Food: 18
+                    Farm Points: 10
+            Buildings:
+                Houses:
+                    Wood: 10
+                    Build Points: 20
+                    Extra Build Points per tree: 2
+                    Space for Peeps: 4
+    Peeps
+        (see below)
+
+Map:
+    Randomly generated for each new game.
+    Grass texture tiled across entire area
+    Tiny grid visible. Trees are 1x1. Houses and Farmland are 2x2
+    Trees randomly generated.
+
 Peeps:
     ID
     First Name (randomly generated for now)
     Last Name (inheirited from Father)
+    Gender
     Birth Date
     Death Date
     Father ID - if none, show N/A
     Mother ID - if none, show N/A
-    Job - if none, show "Laborer"
-    House ID
-    Skills: - all skills start at 1 for now. Points per month = 9 + skill (so skill level 5 in farming will provide 14 points per month)
-        Farming
-        Building
-        Labor
+    Spouse ID - if none, show N/A
+    Job
+    House ID - first available spot for now
+    Skills: - all skills start at 1 for now. 
+        Points per month = 9 + skill (so skill level 5 in farming will provide 14 points per month)
+        Add 0.25 skill levels each month that job is assigned. (takes 4 months to level up)
+            Farming
+            Building
+            Labor
     Resource Use:
         1 food per month
 
-Jobs:
+Jobs: - points counted at the end of the turn.
     Farmer
         Automatically assigns available points to farmland. 
         Farmers work together to finish farmland tiles. There should never be multiple fields partially tilled.
     Builder
         Automatically starts working on the highest priority building under construction (usually the first one you placed)
+        Any extra points go to the next highest priority building.
         Multiple builders speed up the process
     Laborer
-        Will automatically chop down trees.
+        Will automatically chop down trees randomly.
    
 
 Buildings:
     House
-        has a "in construction" stage as soon as you build it. 
-        Can be placed on space with trees, but will add 10 build points to total required. (will automatically chop trees in area during that month)
-        Takes 20 build points. (one builder = two months, two builders = one month)
+        is "in construction" stage as soon as you build it. 
+        Can be placed on space with trees, but will add 2 build points to total required per tree. Trees will dissapear and construction sight will appear, but wood will not be added until beginning of next month.
+        20 build points. (one builder = two months, two builders = one month)
+        5 Wood
         Can house 4 peeps
     Farmland
         Doesn't require builders. Built immediately. Farmers can be assigned that month.
         Must be placed on space with no trees
         Can have one peep assigned per farm tile.
-        10 farm points required every month for April, May, June, July, August, October in order to be fertile.
+        10 farm points required every month for April, May, June, July, August, September, October in order to stay alive.
         Produces 18 food in October
+        images: April, June, August, October, Dead, Empty
 
 Resources: - currently doesn't require a building to store. Infinite storage
     Wood
