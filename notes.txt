@@ -12,7 +12,7 @@ Pages:
         Game - will take effect next new game
             NEW Game
             Starting Conditions:
-                Map size: (default 20x20)
+                Map size: (default 60x33 - roughly equals 1920 x 1080)
                 Couples: (default 2)
                 Resources:
                     Wood: (default 0)
