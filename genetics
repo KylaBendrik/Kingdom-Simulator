@@ -1,0 +1,67 @@
+Gender
+    XX - Female
+    XY - Male
+
+Hair
+    Color
+        Lightness
+            Alleles:
+                A - lightest
+                B
+                C
+                D - Darkest
+            Phenotypes: (lightness from 5 - lightest to 1 - Darkest)
+                AA - 5
+                AB - 4
+                AC - 3
+                AD - 2
+                BB - 3
+                BC - 2
+                BD - 1
+                CC - 2
+                CD - 1
+                DD - 1
+        Saturation
+            Alleles
+                L - blond
+                R - red
+            Phenotypes
+                LL - blond
+                LR - blond
+                RR - red
+        Phenotypes (result of both genes)
+            5 blond = Platinum blond
+            4 blond = golden blond
+            3 blond = light brown
+            2 blond = dark brown
+            1 blond = black
+            5 Red = ginger
+            4 Red = auburn
+            3 Red = red brown
+            2 Red = dark brown
+            1 Red = black
+    Texture
+        Alleles
+            A - Straight
+            B - Curly
+        Phenotypes
+            AA - Straight
+            AB - Straight
+            BB - Curly
+
+Face
+    Eyes
+        Color
+            Alleles
+                B - brown
+                G - green
+                L - blue
+            Phenotypes 
+                BB - brown
+                BG - brown
+                BL - brown
+                GG - green
+                GL - green
+                LL - blue
+        Shape
+        Placement
