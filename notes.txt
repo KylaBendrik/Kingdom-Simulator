@@ -70,6 +70,11 @@ Peeps:
 
 Jobs: - points counted at the end of the turn.
     Farmer
+        Steps:
+            in April, click plots to plant (change from empty to _1) - 10 points needed
+            May, June, July, August, September - 10 points each month
+            October, switchs from _3 to _4, 10 points required. 
+            Food shows up beginning of November turn.
         Automatically assigns available points to farmland. 
         Farmers work together to finish farmland tiles. There should never be multiple fields partially tilled.
     Builder
